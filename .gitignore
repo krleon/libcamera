@@ -3,6 +3,8 @@
 /build/
 /patches/
 
+*.DS_Store
+
 *.patch
 *.pyc
 __pycache__/
