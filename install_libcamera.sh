@@ -40,18 +40,18 @@ apt -y install "${rpicam_packages[@]}"
 if [ ! -d $FRAMOS_DIR ]; then
 	mkdir $FRAMOS_DIR
 else
-	rm -fr $FRAMOS_DIR/framos-libcamera
+	rm -fr $FRAMOS_DIR/libcamera
 	rm -fr $FRAMOS_DIR/rpicam-apps
 fi
 
 # Clone rpicam-apps and copy to FRAMOS_DIR
 pushd ${SW_PACK_DIR} &> /dev/null
 git clone -b $RPICAM_VERSION https://github.com/raspberrypi/rpicam-apps.git
-cp -r framos-libcamera $FRAMOS_DIR
-v1.10.0 $FRAMOS_DIR
+cp -r libcamera $FRAMOS_DIR
+cp rpicam-apps $FRAMOS_DIR
 
 # Install custom framos libcamrea
-pushd ${FRAMOS_DIR}/framos-libcamera &> /dev/null
+pushd ${FRAMOS_DIR}/libcamera &> /dev/null
 meson setup build \
 	--buildtype=release \
 	-Dpipelines=rpi/vc4,rpi/pisp \
