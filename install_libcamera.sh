@@ -48,7 +48,8 @@ fi
 pushd ${SW_PACK_DIR} &> /dev/null
 git clone -b $RPICAM_VERSION https://github.com/raspberrypi/rpicam-apps.git
 cp -r libcamera $FRAMOS_DIR
-cp rpicam-apps $FRAMOS_DIR
+cp -r rpicam-apps $FRAMOS_DIR
+rm -rf rpicam-apps
 
 # Install custom framos libcamrea
 pushd ${FRAMOS_DIR}/libcamera &> /dev/null
