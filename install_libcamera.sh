@@ -14,7 +14,7 @@ fi
 FRAMOS_DIR='/opt/framos'
 CURRENT_DIR=$(dirname $(readlink -f $0))
 SW_PACK_DIR=$CURRENT_DIR/..
-RPICAM_VERSION='v1.11.1'
+RPICAM_VERSION='v1.12.0'
 
 libcam_packages=(libboost-dev \
 		libgnutls28-dev openssl libtiff5-dev pybind11-dev \
