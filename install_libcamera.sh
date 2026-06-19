@@ -57,7 +57,7 @@ meson setup build \
 	--buildtype=release \
 	-Dpipelines=rpi/vc4,rpi/pisp \
 	-Dipas=rpi/vc4,rpi/pisp \
-	-Dv4l2=true \
+	-Dv4l2=enabled \
 	-Dgstreamer=enabled \
 	-Dtest=false \
 	-Dlc-compliance=disabled \
